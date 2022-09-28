@@ -22,7 +22,7 @@ biriyani=fullmeals=friedrice=noodles=50
 def askingforjuice(amount):
     ju=str(input("do you want juice?:yes(or)no\n\n"))
     if ju=="yes":
-        juice(amount)
+        amount=juice(amount)
     elif(ju=="no"):
         print(f"\n your total bill is Rs. {amount}\n {timenow}")
     else:
@@ -33,7 +33,7 @@ def askingforjuice(amount):
 def extrajuice(amount):
     ask=str(input("Do you want any another juice:yes(or)no\n\n"))
     if ask=="yes":
-        juice(amount)
+        amount=juice(amount)
     elif ask=="no":
         print(f"\n your total bill is Rs. {amount}\n {timenow}")
     else:
@@ -43,7 +43,7 @@ def extrajuice(amount):
 def morextradish(amount):
     ask=str(input("Do you want any another dish:yes(or)no\n"))
     if (ask=="yes"):
-        mrng(amount)
+        amount=mrng(amount)
     elif ask=="no":
         print(f"\n your total bill is Rs. {amount}\n {timenow}")
     else:
@@ -53,9 +53,9 @@ def morextradish(amount):
 def aftextradish(amount):
     ask=str(input("Do you want any another dish:yes(or)no\n"))
     if (ask=="yes"):
-        aftnon(amount)
+        amount=aftnon(amount)
     elif ask=="no":
-        askingforjuice(amount)
+        amount=askingforjuice(amount)
     else:
         print("select only yes(or)no")
         aftextradish(amount)
@@ -64,9 +64,9 @@ def aftextradish(amount):
 def nitextradish(amount):
     ask=str(input("Do you want any another dish:yes(or)no\n"))
     if ask=="yes":
-        night(amount)
+        amount=night(amount)
     elif ask=="no":
-        askingforjuice(amount)
+        amount=askingforjuice(amount)
     else:
             print("select only yes(or)no")
             nitextradish(amount)
@@ -77,23 +77,23 @@ def juice(amount):
     if j=="lemon":
         no=int(input("how many :"))
         amount=amount+(lemon*no)
-        extrajuice(amount)
+        amount=extrajuice(amount)
             
     elif j=="apple":
         no=int(input("how many :"))
         amount=amount+(apple*no)
-        extrajuice(amount)
+        amount=extrajuice(amount)
 
     elif j=="pomagranate":
         no=int(input("how many :"))
         amount=amount+(pomogranate*no)
-        extrajuice(amount)
+        amount=extrajuice(amount)
 
     elif j=="badham":
         no=int(input("how many :"))
         amount=amount+(badham*no)
         ask=str(input("Do you want any another juice:yes(or)no\n"))
-        extrajuice(amount)
+        amount=extrajuice(amount)
     else:
         print("slect only form the menu")
         juice(amount)
@@ -106,27 +106,27 @@ def mrng(amount):
     if (oder=="idly"):
         no=int(input("how much do you want:"))
         amount=amount+(idly*no)
-        morextradish(amount)
+        amount=morextradish(amount)
 
     elif (oder=="dosa"):
         no=int(input("how much do you want:"))
         amount=amount+(dosa*no)
-        morextradish(amount)
+        amount=morextradish(amount)
 
     elif (oder=="poori"):
         no=int(input("how much do you want:"))
         amount=amount+(poori*no)
-        morextradish(amount)
+        amount=morextradish(amount)
 
     elif (oder=="chapathi"):
         no=int(input("how much do you want:"))
         amount=amount+(chapathi*no)
-        morextradish(amount)
+        amount=morextradish(amount)
 
     elif (oder=="pongal"):
         no=int(input("how much do you want:"))
         amount=amount+(pongal*no)
-        morextradish(amount)
+        amount=morextradish(amount)
     else:
         print("Select only form menu")
         mrng(amount)
@@ -139,18 +139,18 @@ def aftnon(amount):
     if (oder=="biriyani"):
         no=int(input("how much do you want:"))
         amount=amount+(biriyani*no)
-        aftextradish(amount)
+        amount=aftextradish(amount)
 
 
     elif (oder=="fullmeals"):
         no=int(input("how much do you want:"))
         amount=amount+(fullmeals*no)
-        aftextradish(amount)
+        amount=aftextradish(amount)
         
     elif (oder=="friedrice"):
         no=int(input("how much do you want:"))
         amount=amount+(friedrice*no)
-        aftextradish(amount)
+        amount=aftextradish(amount)
     else:
         print("Select only form menu")
         aftnon(amount)
@@ -163,32 +163,32 @@ def night(amount):
     if (oder=="idly"):
         no=int(input("how much do you want:"))
         amount=amount+(idly*no)
-        nitextradish(amount)
+        amount=nitextradish(amount)
         
     elif (oder=="dosa"):
         no=int(input("how much do you want:"))
         amount=amount+(dosa*no)
-        nitextradish(amount)
+        amount=nitextradish(amount)
         
     elif (oder=="noodles"):
         no=int(input("how much do you want:"))
         amount=amount+(noodles*no)
-        nitextradish(amount)
+        amount=nitextradish(amount)
         
     elif (oder=="chapathi"):
         no=int(input("how much do you want:"))
         amount=amount+(chapathi*no)
-        nitextradish(amount)
+        amount=nitextradish(amount)
         
     elif (oder=="parota"):
         no=int(input("how much do you want:"))
         amount=amount+(parota*no)
-        nitextradish(amount)
+        amount=nitextradish(amount)
         
     elif (oder=="friedrice"):
         no=int(input("how much do you want:"))
         amount=amount+(friedrice*no)
-        nitextradish(amount)
+        amount=nitextradish(amount)
 
     else:
         print("Select only form menu")
